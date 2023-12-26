@@ -4,6 +4,12 @@ void main() {
   runApp(MyApp());
 }
 
+var assetsImage = AssetImage('assets/landscape.jpg');
+var image = Image(
+  image: assetsImage,
+  fit: BoxFit.cover,
+);
+
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -83,13 +89,7 @@ class Kitintale extends StatelessWidget {
                 fit: BoxFit.cover,
               )),
           //importing image from the internet
-          child: Text(
-            "Welcome to Kitintale Market",
-            style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-                color: Color.fromARGB(255, 211, 27, 27)),
-          ),
+          child: image,
           alignment: Alignment(0.5, 0.5),
         ),
       ),

@@ -75,24 +75,53 @@ class Kitintale extends StatelessWidget {
           ),
         ],
       ),
-      body: Center(
-        child: Container(
-          constraints: BoxConstraints.expand(width: 300.0),
-          decoration: BoxDecoration(
-              color: Color.fromARGB(255, 88, 138, 245),
-              border: Border.all(
-                  width: 2.0, color: const Color.fromARGB(255, 236, 165, 165)),
-              image: DecorationImage(
-                image: NetworkImage(
-                  "https://i0.wp.com/mazima.ug/wp-content/uploads/2022/11/2022-08-07.jpg?fit=500%2C385&ssl=1",
+      body: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Icon(
+                  Icons.mail_outlined,
+                  color: Colors.blue,
+                  size: 50.0,
                 ),
-                fit: BoxFit.cover,
-              )),
-          //importing image from the internet
-          child: image,
-          alignment: Alignment(0.5, 0.5),
-        ),
-      ),
+                Text(
+                  "Mail",
+                  style: TextStyle(fontSize: 30),
+                ),
+                Icon(
+                  Icons.phone_android,
+                  color: Colors.blue,
+                  size: 50.0,
+                ),
+                Text("Call", style: TextStyle(fontSize: 30)),
+                Icon(
+                  Icons.music_video,
+                  color: Colors.blue,
+                  size: 50.0,
+                ),
+                Text(
+                  "music",
+                  style: TextStyle(fontSize: 30),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                Container(
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: NetworkImage(
+                          "https://i0.wp.com/mazima.ug/wp-content/uploads/2022/11/2022-08-07.jpg?fit=500%2C385&ssl=1"),
+                    ),
+                  ),
+                ),
+                Text("Hey there", style: TextStyle(fontSize: 30)),
+              ],
+            ),
+          ]),
     );
   }
 }
