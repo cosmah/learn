@@ -74,17 +74,23 @@ class Kitintale extends StatelessWidget {
           constraints: BoxConstraints.expand(width: 300.0),
           decoration: BoxDecoration(
               color: Color.fromARGB(255, 88, 138, 245),
-              borderRadius: BorderRadius.circular(30.0),
               border: Border.all(
-                  width: 2.0, color: const Color.fromARGB(255, 236, 165, 165))),
+                  width: 2.0, color: const Color.fromARGB(255, 236, 165, 165)),
+              image: DecorationImage(
+                image: NetworkImage(
+                  "https://i0.wp.com/mazima.ug/wp-content/uploads/2022/11/2022-08-07.jpg?fit=500%2C385&ssl=1",
+                ),
+                fit: BoxFit.cover,
+              )),
+          //importing image from the internet
           child: Text(
-            "The one stop grossary in mutungo, come and we serve you.",
+            "Welcome to Kitintale Market",
             style: TextStyle(
-                color: Color.fromARGB(222, 0, 0, 0),
-                fontSize: 22.0,
-                fontWeight: FontWeight.bold),
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+                color: Color.fromARGB(255, 211, 27, 27)),
           ),
-          alignment: Alignment(0.0, 0.0),
+          alignment: Alignment(0.5, 0.5),
         ),
       ),
     );
