@@ -110,15 +110,33 @@ class Kitintale extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: <Widget>[
-                Container(
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: NetworkImage(
-                          "https://i0.wp.com/mazima.ug/wp-content/uploads/2022/11/2022-08-07.jpg?fit=500%2C385&ssl=1"),
-                    ),
+                Expanded(
+                  child: Column(
+                    children: <Widget>[
+                      ListTile(
+                        leading: Icon(Icons.map),
+                        title: Text("Map"),
+                        onTap: () {
+                          print("map");
+                        },
+                      ),
+                      ListTile(
+                        leading: Icon(Icons.playlist_add_outlined),
+                        title: Text("Play list"),
+                        onTap: () {
+                          print("list");
+                        },
+                      ),
+                      ListTile(
+                        leading: Icon(Icons.fire_extinguisher),
+                        title: Text("fire"),
+                        onTap: () {
+                          print("fire");
+                        },
+                      ),
+                    ],
                   ),
                 ),
-                Text("Hey there", style: TextStyle(fontSize: 30)),
               ],
             ),
           ]),
