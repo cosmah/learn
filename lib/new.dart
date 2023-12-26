@@ -8,56 +8,89 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Hello",
-      home: Home(),
+      debugShowCheckedModeBanner: false,
+      title: "My app",
+      home: Kitintale(),
     );
   }
 }
 
-class Home extends StatelessWidget {
+class Kitintale extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //f;loating action button
       floatingActionButton: FloatingActionButton(
-        backgroundColor: Color.fromARGB(255, 255, 0, 0),
+        backgroundColor: Color.fromARGB(255, 219, 255, 12),
         onPressed: () {
-          print("floating action button");
+          print("floating button widget");
         },
-        child: Icon(Icons.add),
+        child: Icon(Icons.add_a_photo_sharp),
       ),
       appBar: AppBar(
-        title: Text("Cosmah's Lecture"),
+        title: Text("Welcome to kitintale Market"),
         centerTitle: true,
         backgroundColor: Colors.amber,
         actions: <Widget>[
           IconButton(
-              icon: Icon(Icons.search),
-              onPressed: () {
-                print("search");
-              }),
+            icon: Icon(Icons.home),
+            onPressed: () {
+              print("home");
+            },
+          ),
           IconButton(
-              icon: Icon(Icons.menu),
-              onPressed: () {
-                print("menu");
-              }),
+            icon: Icon(Icons.people),
+            onPressed: () {
+              print("friends");
+            },
+          ),
           IconButton(
-              icon: Icon(Icons.settings),
-              onPressed: () {
-                print("settings");
-              }),
+            icon: Icon(Icons.message),
+            onPressed: () {
+              print("messages");
+            },
+          ),
+          IconButton(
+            icon: Icon(Icons.notifications),
+            onPressed: () {
+              print("notifictions");
+            },
+          ),
+          IconButton(
+            icon: Icon(Icons.search),
+            onPressed: () {
+              print("search");
+            },
+          ),
+          IconButton(
+            icon: Icon(Icons.video_chat),
+            onPressed: () {
+              print("video");
+            },
+          ),
         ],
       ),
-
-      //text widget
-      body: Padding(
-        padding: EdgeInsets.all(20.0),
-        child: Text(
-          "Hello World",
-          style: TextStyle(
-              fontSize: 30,
-              fontWeight: FontWeight.bold,
-              color: Color.fromARGB(255, 0, 0, 0)),
+      body: Center(
+        child: Container(
+          constraints: BoxConstraints.expand(width: 300.0),
+          decoration: BoxDecoration(
+              color: Color.fromARGB(255, 88, 138, 245),
+              border: Border.all(
+                  width: 2.0, color: const Color.fromARGB(255, 236, 165, 165)),
+              image: DecorationImage(
+                image: NetworkImage(
+                  "https://i0.wp.com/mazima.ug/wp-content/uploads/2022/11/2022-08-07.jpg?fit=500%2C385&ssl=1",
+                ),
+                fit: BoxFit.cover,
+              )),
+          //importing image from the internet
+          child: Text(
+            "Welcome to Kitintale Market",
+            style: TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+                color: Color.fromARGB(255, 211, 27, 27)),
+          ),
+          alignment: Alignment(0.5, 0.5),
         ),
       ),
     );
